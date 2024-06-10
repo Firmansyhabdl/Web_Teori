@@ -4,10 +4,10 @@
 
       <div class="box">
          <h3>tautan langsung</h3>
-         <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
-         <a href="shop.php"> <i class="fas fa-angle-right"></i> shop</a>
-         <a href="contact.php"> <i class="fas fa-angle-right"></i> contact</a>
+         <a href="home.php"> <i class="fas fa-angle-right"></i> Home</a>
+         <a href="about.php"> <i class="fas fa-angle-right"></i> About</a>
+         <a href="shop.php"> <i class="fas fa-angle-right"></i> Shop</a>
+         <a href="contact.php"> <i class="fas fa-angle-right"></i> Contact</a>
       </div>
 
       <div class="box">

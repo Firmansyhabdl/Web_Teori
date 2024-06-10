@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
       <input type="text" name="name" required placeholder="masukkan username Anda" maxlength="20"  class="box">
       <input type="email" name="email" required placeholder="masukkan email Anda" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="masukkan password Anda" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="cpass" required placeholder="konfirmasu password Anda" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="cpass" required placeholder="konfirmasi password Anda" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="Daftar sekarang" class="btn" name="submit">
       <p>Sudah memiliki akun?</p>
       <a href="user_login.php" class="option-btn">login sekarang</a>
