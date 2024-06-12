@@ -1,17 +1,14 @@
 <?php
-
 include 'components/connect.php';
-
 session_start();
 
 if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
-};
+}
 
 include 'components/wishlist_cart.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -20,31 +17,26 @@ include 'components/wishlist_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>kategory</title>
-   
-   <!-- font awesome cdn link  -->
+   <title>Kategori</title>
+   <!-- Font Awesome CDN Link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
+   <!-- Custom CSS File Link -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
    
 <?php include 'components/user_header.php'; ?>
 
 <section class="products">
-
    <h1 class="heading">Kategori</h1>
-
    <div class="box-container">
-
    <?php
-     $category = $_GET['category'];
-     $select_products = $conn->prepare("SELECT * FROM `products` WHERE name LIKE '%{$category}%'"); 
-     $select_products->execute();
-     if($select_products->rowCount() > 0){
-      while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
+     if(isset($_GET['category'])){
+        $category = $_GET['category'];
+        $select_products = $conn->prepare("SELECT * FROM `products` WHERE category = ?");
+        $select_products->execute([$category]);
+        if($select_products->rowCount() > 0){
+         while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
    ?>
    <form action="" method="post" class="box">
       <input type="hidden" name="pid" value="<?= $fetch_product['id']; ?>">
@@ -62,31 +54,18 @@ include 'components/wishlist_cart.php';
       <input type="submit" value="Tambahkan ke keranjang" class="btn" name="add_to_cart">
    </form>
    <?php
+         }
+      }else{
+         echo '<p class="empty">Tidak ada produk yang ditemukan!</p>';
       }
-   }else{
-      echo '<p class="empty">tidak ada produk yang ditemukan!</p>';
-   }
+     }else{
+        echo '<p class="empty">Kategori tidak ditemukan!</p>';
+     }
    ?>
-
    </div>
-
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <?php include 'components/footer.php'; ?>
-
 <script src="js/script.js"></script>
-
 </body>
 </html>

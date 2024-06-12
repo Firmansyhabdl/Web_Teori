@@ -150,7 +150,7 @@ if(isset($_GET['delete'])){
    <div class="box-container">
 
    <?php
-      $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 1");
+      $select_products = $conn->prepare("SELECT * FROM `products`");
       $select_products->execute();
       if($select_products->rowCount() > 0){
          while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){ 
