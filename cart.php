@@ -72,7 +72,11 @@ if(isset($_POST['update_qty'])){
       <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
       <div class="name"><?= $fetch_cart['name']; ?></div>
       <div class="flex">
+<<<<<<< HEAD
       <div class="price"><span>Rp</span><?= number_format($fetch_cart['price'], 0, ',', '.'); ?><span>,-</span></div>
+=======
+         <div class="price">Rp<?= $fetch_cart['price']; ?>/-</div>
+>>>>>>> 23f5273698a0cb1bb30b7d72f25f2b3ef33fe005
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="<?= $fetch_cart['quantity']; ?>">
          <button type="submit" class="fas fa-edit" name="update_qty"></button>
       </div>
@@ -89,7 +93,7 @@ if(isset($_POST['update_qty'])){
    </div>
 
    <div class="cart-total">
-      <p>hasil akhir : <span>$<?= $grand_total; ?>/-</span></p>
+      <p>hasil akhir : <span>Rp<?= $grand_total; ?>/-</span></p>
       <a href="shop.php" class="option-btn">lanjutkan Belanja</a>
       <a href="cart.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('hapus semua dari keranjang?');">hapus semua item</a>
       <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">lanjutkan ke pembayaran</a>
