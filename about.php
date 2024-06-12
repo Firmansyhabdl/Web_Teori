@@ -38,7 +38,9 @@ if(isset($_SESSION['user_id'])){
    <div class="row">
 
       <div class="image">
-         <img src="images/about-img.svg" alt="">
+         <img src="images/about-img.
+         
+      " alt="">
       </div>
 
       <div class="content">
@@ -60,7 +62,7 @@ if(isset($_SESSION['user_id'])){
    <div class="swiper-wrapper">
 
       <div class="swiper-slide slide">
-         <img src="images/pic-1.png" alt="">
+         <img src="foto/MuslimahKu.jpg" alt="">
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
