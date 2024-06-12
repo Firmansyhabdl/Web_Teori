@@ -72,11 +72,7 @@ if(isset($_POST['update_qty'])){
       <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
       <div class="name"><?= $fetch_cart['name']; ?></div>
       <div class="flex">
-<<<<<<< HEAD
-      <div class="price"><span>Rp</span><?= number_format($fetch_cart['price'], 0, ',', '.'); ?><span>,-</span></div>
-=======
-         <div class="price">Rp<?= $fetch_cart['price']; ?>/-</div>
->>>>>>> 23f5273698a0cb1bb30b7d72f25f2b3ef33fe005
+         <div class="price"><span>Rp</span><?= number_format($fetch_cart['price'], 0, ',', '.'); ?><span>,-</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="<?= $fetch_cart['quantity']; ?>">
          <button type="submit" class="fas fa-edit" name="update_qty"></button>
       </div>
