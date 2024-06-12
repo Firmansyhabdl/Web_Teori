@@ -26,8 +26,47 @@ include 'components/wishlist_cart.php';
    <!-- Custom CSS File Link -->
    <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+   .category {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.category-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
+    justify-items: center;
+}
+
+.box {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    font-size: 16px;
+}
+
+</style>
 
 <body>
+   
 
    <?php include 'components/user_header.php'; ?>
 
@@ -74,45 +113,43 @@ include 'components/wishlist_cart.php';
    </div>
 
    <section class="category">
-      <h1 class="heading">Berbelanja Berdasarkan Kategori</h1>
-      <div class="swiper category-slider">
-         <div class="swiper-wrapper">
-            <a href="category.php?category=Asus" class="swiper-slide slide">
-               <img src="foto/Asus/Asus.png" alt="">
-               <h3>Asus</h3>
-            </a>
-            <a href="category.php?category=Acer" class="swiper-slide slide">
-               <img src="foto/Acer/AcerAspire 3 A314-36M-37EEPure Silver.png" alt="">
-               <h3>Acer</h3>
-            </a>
-            <a href="category.php?category=Lenovo" class="swiper-slide slide">
-               <img src="foto/Lenovo/Lenovo.jpg" alt="">
-               <h3>Lenovo</h3>
-            </a>
-            <a href="category.php?category=HP" class="swiper-slide slide">
-               <img src="foto/HP/Hp.png" alt="">
-               <h3>HP</h3>
-            </a>
-            <a href="category.php?category=Axioo" class="swiper-slide slide">
-               <img src="foto/Axioo/Axioo.png" alt="">
-               <h3>Axioo</h3>
-            </a>
-            <a href="category.php?category=Infinix" class="swiper-slide slide">
-               <img src="foto/Infinix/Infinix.png" alt="">
-               <h3>Infinix</h3>
-            </a>
-            <a href="category.php?category=Dell" class="swiper-slide slide">
-               <img src="foto/Dell/dell.png" alt="">
-               <h3>Dell</h3>
-            </a>
-            <a href="category.php?category=Toshiba" class="swiper-slide slide">
-               <img src="foto/Toshiba/toshiba.png" alt="">
-               <h3>Toshiba</h3>
-            </a>
-         </div>
-         <div class="swiper-pagination"></div>
-      </div>
-   </section>
+    <h1 class="heading">Berbelanja Berdasarkan Kategori</h1>
+    <div class="category-box">
+        <a href="category.php?category=Asus" class="box">
+            <img src="foto/Asus/Asus.png" alt="">
+            <h3>Asus</h3>
+        </a>
+        <a href="category.php?category=Acer" class="box">
+            <img src="foto/Acer/AcerAspire 3 A314-36M-37EEPure Silver.png" alt="">
+            <h3>Acer</h3>
+        </a>
+        <a href="category.php?category=Lenovo" class="box">
+            <img src="foto/Lenovo/Lenovo.jpg" alt="">
+            <h3>Lenovo</h3>
+        </a>
+        <a href="category.php?category=HP" class="box">
+            <img src="foto/HP/Hp.png" alt="">
+            <h3>HP</h3>
+        </a>
+        <a href="category.php?category=Axioo" class="box">
+            <img src="foto/Axioo/Axioo.png" alt="">
+            <h3>Axioo</h3>
+        </a>
+        <a href="category.php?category=Infinix" class="box">
+            <img src="foto/Infinix/Infinix.png" alt="">
+            <h3>Infinix</h3>
+        </a>
+        <a href="category.php?category=Dell" class="box">
+            <img src="foto/Dell/dell.png" alt="">
+            <h3>Dell</h3>
+        </a>
+        <a href="category.php?category=Toshiba" class="box">
+            <img src="foto/Toshiba/toshiba.png" alt="">
+            <h3>Toshiba</h3>
+        </a>
+    </div>
+</section>
+
 
    <section class="products">
 
