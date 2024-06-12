@@ -51,7 +51,7 @@ if(isset($_POST['add_product'])){
 
       if($insert_products){
          if($image_size_01 > 2000000 OR $image_size_02 > 2000000 OR $image_size_03 > 2000000){
-            $message[] = 'UKURAN GAMBAR TERLALU BESAR!';
+            $message[] = 'ukuran gambar terlalu besar!';
          }else{
             move_uploaded_file($image_tmp_name_01, $image_folder_01);
             move_uploaded_file($image_tmp_name_02, $image_folder_02);
